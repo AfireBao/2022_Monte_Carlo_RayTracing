@@ -1,0 +1,82 @@
+
+PerspectiveCamera {
+    center 0 0 10
+    direction 0 0 -1
+    up 0 1 0
+    angle 30
+    width 640
+    height 480
+}
+
+
+
+Materials {
+    numMaterials 8
+    Material { diffuseColor 1 0.41 0.7 }
+    Material { diffuseColor 1 1 1}
+    Material { diffuseColor 0.52 0.80 0.98}
+    Material { diffuseColor 0.41 0.41 0.41
+                Energy 2 2 2}
+    Material { diffuseColor 0.99 0.99 0.99
+                type 1}
+    Material { diffuseColor 0.99 0.99 0.09
+                type 2}
+    Material {  diffuseColor 0.59 0.98 0.59}
+
+    Material { diffuseColor 0.211 0.486 0.722}
+
+}
+
+Group {
+    numObjects 8
+    
+    MaterialIndex 7
+     Transform {
+		Scale  5 5 5 
+		Translate  0.03 -0.450 0 	
+        TriangleMesh {
+            obj_file mesh/bunny_1k.obj
+        }
+    }
+    
+    MaterialIndex 1
+    Plane {
+        normal 0 -1 0
+        offset -2
+    }
+    
+    MaterialIndex 1
+    Plane {
+        normal 0 1 0
+        offset -2
+    }
+    MaterialIndex 1
+    Plane {
+        normal 0 0 -1
+        offset -20
+    }
+    MaterialIndex 1
+    Plane {
+        normal 0 0 1
+        offset -2
+    }
+    MaterialIndex 0
+    Plane {
+        normal 1 0 0
+        offset -2
+    }
+    MaterialIndex 2
+    Plane {
+        normal -1 0 0
+        offset -2
+    }
+
+    MaterialIndex 3
+    Sphere {
+	center 0 1002 0
+        radius 1000.001 
+    }
+
+   
+}
+

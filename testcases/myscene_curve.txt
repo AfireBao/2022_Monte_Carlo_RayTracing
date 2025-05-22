@@ -1,0 +1,136 @@
+
+PerspectiveCamera {
+    center 0 0 10
+    direction 0 0 -1
+    up 0 1 0
+    angle 30
+    width 640
+    height 480
+}
+
+
+
+Materials {
+    numMaterials 13
+    Material { diffuseColor 0.628 0.125 0.941 
+                type 0}
+    Material { diffuseColor 1 1 1}
+    Material { diffuseColor 0.52 0.80 0.98}
+    Material { diffuseColor 0.41 0.41 0.41
+                Energy 12 12 12}
+    Material { diffuseColor 0.99 0.99 0.99
+                type 1}
+    Material { diffuseColor 0.99 0.99 0.09
+                type 2}
+    Material {  diffuseColor 0.59 0.98 0.59
+                Func 7
+                Texture ./texture/vase.png
+            }
+    Material {  diffuseColor 0.59 0.98 0.59
+                Func 1
+                Texture ./texture/MCWood.png
+            }
+    Material {  diffuseColor 0.59 0.98 0.59
+                Func 2
+                Texture ./texture/MCWood.png
+            }
+    Material {  diffuseColor 0.59 0.98 0.59
+                Func 3
+                Texture ./texture/MCWood.png
+            }
+    Material {  diffuseColor 0.59 0.98 0.59
+                Func 4
+                Texture ./texture/MCWood.png
+            }
+    Material {  diffuseColor 0.59 0.98 0.59
+                Func 5
+                Texture ./texture/MCWood.png
+            }
+    Material {  diffuseColor 0.59 0.98 0.59
+                Func 6
+                Texture ./texture/MCWood.png
+            }
+
+}
+
+Group {
+    numObjects 11
+
+    MaterialIndex 0
+    Transform {
+		Scale  5 5 5 
+		Translate  -0.2 -0.465 0 	
+        TriangleMesh {
+            obj_file mesh/bunny_1k.obj
+        }
+    }
+    
+    MaterialIndex 6
+    Transform {
+        ZRotate 0
+        Translate  1 0 -0.5
+        RevSurface {
+            profile BezierCurve {
+            controls
+                [ 0 -0.01 0]
+                [ 0.3 -0.01 0]
+                [ 0.5 -0.05 0]
+                [ 0.1 -0.2 0 ]
+                [ 0.03 -0.730 0]
+                [ 1.27 -0.8 0 ]
+                [ 0.31 -2 0 ]
+        }
+        }
+    }
+    MaterialIndex 4
+    Sphere {
+        center -1 0 -1.5 
+        radius 0.6
+    }
+    MaterialIndex 5
+    Sphere {
+        center 0.25 -1.65 2 
+        radius 0.35
+    }
+    
+    MaterialIndex 8
+    Plane {
+        normal 0 -1 0
+        offset -2
+    }
+    
+    MaterialIndex 9
+    Plane {
+        normal 0 1 0
+        offset -2
+    }
+    MaterialIndex 12
+    Plane {
+        normal 0 0 -1
+        offset -10.1
+    }
+    MaterialIndex 7
+    Plane {
+        normal 0 0 1
+        offset -2
+    }
+    MaterialIndex 10
+    Plane {
+        normal 1 0 0
+        offset -2
+    }
+    MaterialIndex 11
+    Plane {
+        normal -1 0 0
+        offset -2
+    }
+
+    MaterialIndex 3
+    Sphere {
+	center 0 252 0
+        radius 250.001 
+    }
+
+   
+}
+
